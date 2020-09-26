@@ -36,8 +36,8 @@ All configuration parameters are found in `line.lua`. Changing any parameter
 not explained in the table below does nothing (as they are just placeholders)
 
 * `config.y`: the Y distance from the top of the screen. Supports two different formats:
-** Percentage: a string (surrounded by double quotes) like so: `"40%"`
-** Absolute: the amount of pixels, an integer, like so: `300`
+ * Percentage: a string (surrounded by double quotes) like so: `"40%"`
+ * Absolute: the amount of pixels, an integer, like so: `300`
 * `config.font`: the typeface (a string)
 * `config.size`: the font size (an integer)
 * `config.red`: the amount of red in the RGB value of the font color (`0`-`255`)
@@ -48,12 +48,12 @@ not explained in the table below does nothing (as they are just placeholders)
 * `config.background.color.blue`: the amount of blue in the RGB value of the background (`0`-`255`)
 * `config.background.alpha`: opacity of the background (`0`-`255`)
 * `config.fadeInTime`: the time in seconds it takes for the text to fade in. A decimal number.
-** Set this to `0` to instantly display the popup.
+ * Set this to `0` to instantly display the popup.
 * `config.fadeOutTime`: the time in seconds it takes for the text to fade out. A decimal number.
-** Set this to `0` to instantly remove the popup.
+ * Set this to `0` to instantly remove the popup.
 * `config.displayTime`: the time in seconds to display the popup. A decimal number.
-** The timer starts when the fade in starts, not when it is fully displayed.
-** Must be strictly higher than the fade in timer.
+ * The timer starts when the fade in starts, not when it is fully displayed.
+ * Must be strictly higher than the fade in timer.
    If this timer is shorter, the fade in will not be aborted.
    This *will* lead to unwanted behaviour such as a lingering message box and possibly
    a race between the fade in and fade out mechanics. Don't do this.
