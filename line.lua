@@ -20,7 +20,8 @@ config.background.color.red = 20
 config.background.color.blue = 20
 config.background.color.green = 20
 config.fadeInTime = 0.05
-config.fadeOutTime = 0.25
+config.fadeOutTime = 0.20
+config.displayTime = 1.5
 
 function line:init()
    lib:dbg("Initiating, alpha is now " .. config.background.alpha)
@@ -113,6 +114,10 @@ function line:fadeOut()
    end
    container:alpha(0)
    container:bg_alpha(0)
+end
+
+function line:getDisplayTime()
+   return tostring(self.config.displayTime)
 end
 
 function ensureCoord(y)

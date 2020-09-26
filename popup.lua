@@ -28,7 +28,7 @@ event = function(...)
    elseif command == "hide" then
       textLine:fadeOut()
    elseif command == "msg" then
-      windower.send_command("popup display " .. table.concat(args, " ") .. "; wait 2; popup hide")
+      windower.send_command("popup display " .. table.concat(args, " ") .. "; wait " .. textLine:getDisplayTime() .. "; popup hide")
    else
       print("Unknown command: " .. args[1])
    end
